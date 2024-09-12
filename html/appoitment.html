@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Bright Dental Clinic</title>
+    <link rel="stylesheet" href="/css/appointment.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Smile Bright Dental</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Welcome to Smile Bright Dental</h2>
+                <p>Your journey to a perfect smile starts here.</p>
+                <!-- Corrected Button without <a> tag -->
+                <button id="appointmentBtn" class="btn">Book an Appointment</button>
+            </div>
+        </section>
+
+        <!-- Other sections (services, about, contact) go here -->
+
+    </main>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit" class="btn">Submit Appointment Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Smile Bright Dental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('appointmentModal');
+            const btn = document.getElementById('appointmentBtn');
+            const span = document.getElementsByClassName('close')[0];
+            const form = document.getElementById('appointmentForm');
+
+            btn.onclick = function () {
+                modal.style.display = 'block';
+            }
+
+            span.onclick = function () {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            form.onsubmit = function (e) {
+                e.preventDefault();
+                // Log form data
+                console.log('Appointment requested for:');
+                console.log('Name:', form.name.value);
+                console.log('Email:', form.email.value);
+                console.log('Phone:', form.phone.value);
+                console.log('Date:', form.date.value);
+                console.log('Time:', form.time.value);
+
+                alert('Appointment request submitted! We will contact you shortly to confirm.');
+                modal.style.display = 'none';
+                form.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>

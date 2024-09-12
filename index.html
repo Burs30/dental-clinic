@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Bright Dental Clinic</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/appointment.css">
+
+
+    <script src="./js/script.js" defer></script>
+    <script src="./js/popupbook.js" defer></script>
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="./image/logo.jpg" alt="Smile Bright Dental Logo" class="logo-img">
+                    <a href="#" class="logo">Smile Bright Dental</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn btn-login"><a href="/html/login.html">Login</a></button>
+                    <button class="btn btn-signup"><a href="/html/signup.html">Sign Up</a></button>
+                    <button id="appointmentBtn" class="btn btnappointment">Book an Appointment</button>
+
+                </div>
+                <button class="mobile-menu-btn">&#9776;</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit" class="btn">Submit Appointment Request</button>
+            </form>
+        </div>
+    </div>
+
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Welcome to Smile Bright Dental</h1>
+                <p>Your journey to a perfect smile starts here</p>
+                <a href="#appoitmentModal" class="cta-button">Book an Appointment</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Our History</h2>
+                <p>Smile Bright Dental has been serving our community for over 30 years. Founded in 1990 by Dr. Jane
+                    Smith, our clinic has grown from a small practice to a state-of-the-art facility with a team of
+                    expert dentists and specialists.</p>
+                <p>Our mission has always been to provide the highest quality dental care in a comfortable and welcoming
+                    environment. We've helped thousands of patients achieve healthier, brighter smiles, and we continue
+                    to stay at the forefront of dental technology and techniques.</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="./image/servicesimg/generaldentistry.jpg" alt="General Dentistry">
+                        <h3>General Dentistry</h3>
+                        <p>Comprehensive care for your oral health</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/cosmetic.jpg" alt="Cosmetic Dentistry">
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Enhance your smile with our aesthetic treatments</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/Orthodontics.jpeg" alt="Orthodontics">
+                        <h3>Orthodontics</h3>
+                        <p>Straighten your teeth for a perfect smile</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/pediatric.webp" alt="Pediatric Dentistry">
+                        <h3>Pediatric Dentistry</h3>
+                        <p>Specialized care for our youngest patients</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/implat.jpg" alt="Dental Implants">
+                        <h3>Dental Implants</h3>
+                        <p>Restore your smile with permanent tooth replacements</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/teethwhitening.jpg" alt="Teeth Whitening">
+                        <h3>Teeth Whitening</h3>
+                        <p>Brighten your smile with professional whitening treatments</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/surgery .jpg" alt="Oral Surgery">
+                        <h3>Oral Surgery</h3>
+                        <p>Expert surgical procedures for complex dental issues</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/periodontics.jpg" alt="Periodontics">
+                        <h3>Periodontics</h3>
+                        <p>Specialized care for gum health and disease prevention</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="./image/servicesimg/Endodontics.jpg" alt="Endodontics">
+                        <h3>Endodontics</h3>
+                        <p>Root canal therapy and treatments for tooth pulp issues</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="./image/team/doc1.jpg" alt="Dr. Jane Smith">
+                        <h3>Dr. Jane Smith</h3>
+                        <p>Founder & Lead Dentist</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./image/team/doc2.jpg" alt="Dr. John Doe">
+                        <h3>Dr. John Doe</h3>
+                        <p>Orthodontist</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./image/team/doc3.jpg" alt="Dr. Emily Brown">
+                        <h3>Dr. Lee Brown</h3>
+                        <p>Pediatric Dentist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Patients Say</h2>
+                <div class="carousel">
+                    <div class="testimonial-slide">
+                        <p>"Smile Bright Dental transformed my smile! The team is professional, caring, and made me feel
+                            comfortable throughout my treatment."</p>
+                        <p class="author">- Sarah Johnson</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"I've been coming to Smile Bright Dental for years. They always provide excellent service and
+                            make sure I understand all my treatment options."</p>
+                        <p class="author">- Mike Thompson</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"As someone who used to be afraid of dentists, I can't recommend Smile Bright Dental enough.
+                            They've completely changed my perspective on dental care."</p>
+                        <p class="author">- Emily Davis</p>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="awards">
+            <div class="container">
+                <h2>Our Achievements</h2>
+                <div class="award">
+                    <img src="./image/awards/award2~mv2.jpg" alt="Award Icon" class="award-icon">
+                    <div class="award-details">
+                        <h3>Best Dental Clinic 2023</h3>
+                        <p>Awarded by the National Dental Association</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Smile Bright Dental</h3>
+                    <p>123 Dental Street</p>
+                    <p>Cityville, State 12345</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9am - 5pm</p>
+                    <p>Saturday: 10am - 2pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Smile Bright Dental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
